@@ -1,0 +1,85 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: text; }
+.item3 { grid-area: footer;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    '. header header header .'
+    '. text text text .'
+	'. text text text .'
+	'. text text text .'
+	'. footer footer footer .';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header' 
+      'text text text text text' 
+      'text text text text text'
+	  'text text text text text' 
+	  'footer footer footer footer footer';
+  }
+}
+
+/* fonts and font colors*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0F0D7C;
+}
+
+h2 {
+	grid-area: header;
+	padding: 8fr;
+	text-align: center;
+	font-size: 30px;
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	color: #0F0D7C;
+}
+
+li a {
+  display: block;
+  color: #0F0D7C;
+  border: 2px solid #0F0D7C;
+  border-radius: 25px;
+  padding: 6px;
+  margin: 4%;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #0F0D7C;
+  color: white;
+}
+
+.fancyLink {
+border: 2px solid #0F0D7C;
+border-radius: 25px;
+padding: 2px 33px;
+text-align: center;
+text-decoration: none;
+font-size: 20px;
+color: #0F0D7C;
+display: inline;
+}
+.fancyLink:hover {
+background-color: #0F0D7C;
+color: white;
+}
